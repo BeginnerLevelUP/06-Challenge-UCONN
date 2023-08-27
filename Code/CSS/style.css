@@ -1,36 +1,104 @@
+/* 
+color theme based on weather status
+fair day-blue
+sunny-yellow
+raining- gray
+snow/slate -white 
 
+possibly shades to represent the percetnage 
+*/
 
 /* Body Of The Page */
-.flex-container{
-    display:flex;
-    gap:20px;
+
+.flex-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 50px;
+    margin: 10% auto;
 }
+
 .flex-container .left,.flex-container .right{
-    height:600px;
+    height:800px;
 }
 .flex-container .left{
     background-color:black;
-    width:200px;
+    width:15%;
 }
 .flex-container .right{
     display:flex;
     flex-direction:column;
     gap:20px;
     background-color:red;
-    width:750px;
+    width:70%;
 }
 .flex-container .right .top,.flex-container .right .bottom{
     background-color:green;
     height:inherit;
 }
 
+/* Mobile Only Div */
+#mobileOnly{
+    display:none;
+    margin:0 auto;
+    width:200px;
+    text-align: center;
+    border:2px solid black;
+    padding:2%;
+}
+#mobileOnly span{
+display:flex;
+justify-content: space-evenly;
+}
+.navbar{
+    display:none;
+}
 /* Media Queries */
 @media only screen and (max-width:991px) and (min-width:768px){
     /* tablet */
+    .flex-container {
+    flex-direction: column;
+    margin:20% auto;
+    }
+    .flex-container .left{
+        margin:5% auto;
+        width:70%;
+        height:80px;
+    }
+    .flex-container .right{
+        width:90%;
+        height:400px;
+    }
     }
     
     
     @media only screen and (max-width: 767px){
     /* phone  */
+    #mobileOnly{
+        margin:25% auto;
     }
-    
+    .flex-container {
+        margin: 0% auto;
+        flex-direction: column;
+        }
+        .flex-container .left{
+            display:none;
+        }
+        .flex-container .right{
+            display:block;
+            width:90%;
+            height:400px;
+        }
+        #mobileOnly{
+            display:block;
+        }
+        .flex-container .right .top,.flex-container .right .bottom{
+            margin-bottom:10%;
+         }
+         .flex-container .right .bottom{
+            height:200px;
+         }
+         .navbar{
+            display:block;
+        }
+    }
