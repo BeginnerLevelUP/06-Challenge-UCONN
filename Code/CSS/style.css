@@ -1,0 +1,36 @@
+
+
+/* Body Of The Page */
+.flex-container{
+    display:flex;
+    gap:20px;
+}
+.flex-container .left,.flex-container .right{
+    height:600px;
+}
+.flex-container .left{
+    background-color:black;
+    width:200px;
+}
+.flex-container .right{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    background-color:red;
+    width:750px;
+}
+.flex-container .right .top,.flex-container .right .bottom{
+    background-color:green;
+    height:inherit;
+}
+
+/* Media Queries */
+@media only screen and (max-width:991px) and (min-width:768px){
+    /* tablet */
+    }
+    
+    
+    @media only screen and (max-width: 767px){
+    /* phone  */
+    }
+    
