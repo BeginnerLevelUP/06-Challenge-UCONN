@@ -22,7 +22,7 @@ possibly shades to represent the percetnage
     height:800px;
 }
 .flex-container .left{
-    background-color:black;
+    background-color:beige;
     width:15%;
 }
 .flex-container .right{
@@ -36,6 +36,21 @@ possibly shades to represent the percetnage
     background-color:green;
     height:inherit;
 }
+.top span{
+    display:flex;
+    justify-content:space-evenly;
+}
+.bottom{
+display: flex;
+padding: 2%;
+}
+.bottom div{
+    background-color:yellow;
+    width:350px;
+    height:300px;
+    margin:1%;
+}
+
 
 /* Mobile Only Div */
 #mobileOnly{

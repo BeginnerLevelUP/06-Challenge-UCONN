@@ -11,81 +11,124 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./Code/CSS/reset.css">
-    <link rel="stylesheet" href="./Code/CSS/normalize.css">
-    <link rel="stylesheet" href="./Code/CSS/style.css">
+  <!-- <link rel="stylesheet" href="./Code/CSS/reset.css">
+  <link rel="stylesheet" href="./Code/CSS/normalize.css"> -->
+  <link rel="stylesheet" href="./Code/CSS/style.css">
 </head>
 
 <body>
   <header>
-   <h1>YO</h1>
+    <h1>YO</h1>
   </header>
   <main>
     <nav class="navbar bg-light fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Offcanvas navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <form class="d-flex mt-3" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
-            </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Offcanvas navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
     <div id="mobileOnly">
-        <p id="currentLocation">currentLocation</p>
-        <h2 id="temperature">temperature</h2>
-        <p id="weatherStatus">weatherStatus</p>
-        <span>
-            <p id="high">high</p>
-            <p id="low">low</p>
-        </span>
+      <p class="currentLocation">currentLocation</p>
+      <h2 class="temperature">temperature</h2>
+      <p id="weatherStatus">weatherStatus</p>
+      <span>
+        <p id="high">high</p>
+        <p id="low">low</p>
+      </span>
 
 
     </div>
     <section class="flex-container">
-        <article class="left">
+      <article class="left">
+        <div class="mb-3">
+          <label for="search" class="form-label">Search</label>
+          <input type="text"
+            class="form-control" name="search" id="searchInput" aria-describedby="helpId" placeholder="">
+          <small id="helpId" class="form-text text-muted">Input City Name</small>
+        </div>
+        <a name="" id="searchButton" class="btn btn-primary" href="#" role="button">Search</a>
 
-        </article>
+        <ul id="searchedLocations">
 
-        <article class="right">
-            <div class="top">
-                
-            </div>
-            <div class="bottom">
+        </ul>
+      </article>
 
-            </div>
-        </article>
+      <article class="right">
+        <div class="top">
+          <span>
+            <h1 class="currentLocation">currentLocation</h1>
+            <h1 class="currentDate">currentDate</h1>
+          </span>
+          <p class="temperature">temperature</p>
+          <p class="wind">Wind</p>
+          <p class="humid">Humidity</p>
+        </div>
+        <div class="bottom">
+          <div class="dif-day">
+                      <h4 class="currentDate">currentDate</h4>
+                      <p class="temperature">temperature</p>
+                      <p class="wind">Wind</p>
+                      <p class="humid">Humidity</p>
+          </div>
+          <div data-day="dif-day">
+                      <h4 class="currentDate">currentDate</h4>
+                      <p class="temperature">temperature</p>
+                      <p class="wind">Wind</p>
+                      <p class="humid">Humidity</p>
+          </div>
+          <div data-day="dif-day">
+                      <h4 class="currentDate">currentDate</h4>
+                      <p class="temperature">temperature</p>
+                      <p class="wind">Wind</p>
+                      <p class="humid">Humidity</p>
+          </div>
+          <div data-day="dif-day">
+                      <h4 class="currentDate">currentDate</h4>
+                      <p class="temperature">temperature</p>
+                      <p class="wind">Wind</p>
+                      <p class="humid">Humidity</p>
+          </div>
+
+          </div>
+        </div>
+      </article>
 
     </section>
   </main>
@@ -95,13 +138,13 @@
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-  </script>
+    </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-  </script>
+    </script>
 
-  <script src="./Code/JavaScript /script.js" type="module"></script>   
+  <script src="./Code/JavaScript /script.js" type="module"></script>
 </body>
 
 </html>
